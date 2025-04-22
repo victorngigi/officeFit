@@ -1,0 +1,551 @@
+{
+    "chairs": [
+      {
+        "id": 1,
+        "name": "ErgoComfort High-Back Office Chair",
+        "price": 199.99,
+        "description": "Adjustable lumbar support and breathable mesh back for all-day comfort.",
+        "rating": 4.7,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?office-chair"
+      },
+      {
+        "id": 2,
+        "name": "Velocity Racing-Style Gaming Chair",
+        "price": 249.50,
+        "description": "PU leather upholstery with high-density foam and headrest pillow.",
+        "rating": 4.5,
+        "color": "Red",
+        "imageUrl": "https://source.unsplash.com/400x400/?gaming-chair"
+      },
+      {
+        "id": 3,
+        "name": "Scout Mid-Century Accent Chair",
+        "price": 129.00,
+        "description": "Solid wood legs and plush fabric upholstery in a modern silhouette.",
+        "rating": 4.3,
+        "color": "Gray",
+        "imageUrl": "https://source.unsplash.com/400x400/?accent-chair"
+      },
+      {
+        "id": 4,
+        "name": "AirFlex Mesh Task Chair",
+        "price": 159.75,
+        "description": "Ergonomic tilt mechanism with breathable mesh and adjustable armrests.",
+        "rating": 4.6,
+        "color": "Blue",
+        "imageUrl": "https://source.unsplash.com/400x400/?mesh-chair"
+      },
+      {
+        "id": 5,
+        "name": "Lux Leather Executive Chair",
+        "price": 289.99,
+        "description": "High-back swivel chair with premium bonded leather and padded arms.",
+        "rating": 4.8,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?executive-chair"
+      },
+      {
+        "id": 6,
+        "name": "Compact Armless Desk Chair",
+        "price": 79.99,
+        "description": "Space-saving design with cushioned seat and casters for easy movement.",
+        "rating": 4.2,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?desk-chair"
+      },
+      {
+        "id": 7,
+        "name": "Titan Heavy-Duty Saddle Stool",
+        "price": 139.00,
+        "description": "Height-adjustable stool with durable metal base and vinyl cover.",
+        "rating": 4.1,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?saddle-stool"
+      },
+      {
+        "id": 8,
+        "name": "Serene Side Chair",
+        "price": 99.50,
+        "description": "Elegant design with padded seat and rubberwood frame.",
+        "rating": 4.4,
+        "color": "Tan",
+        "imageUrl": "https://source.unsplash.com/400x400/?side-chair"
+      },
+      {
+        "id": 9,
+        "name": "Halo Swivel Drafting Chair",
+        "price": 179.99,
+        "description": "Ideal for drafting tables with adjustable foot ring and pneumatic lift.",
+        "rating": 4.5,
+        "color": "Gray",
+        "imageUrl": "https://source.unsplash.com/400x400/?drafting-chair"
+      },
+      {
+        "id": 10,
+        "name": "Vivid Reception Chair",
+        "price": 149.25,
+        "description": "Upholstered vinyl chair perfect for waiting areas and lounges.",
+        "rating": 4.0,
+        "color": "Blue",
+        "imageUrl": "https://source.unsplash.com/400x400/?reception-chair"
+      },
+      {
+        "id": 11,
+        "name": "Balance Kneeling Chair",
+        "price": 119.99,
+        "description": "Ergonomic design promoting better posture with comfortable kneepad.",
+        "rating": 4.3,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?kneeling-chair"
+      },
+      {
+        "id": 12,
+        "name": "Nova Stackable Side Chair",
+        "price": 89.00,
+        "description": "Durable polypropylene seat with steel frame, stackable for storage.",
+        "rating": 4.2,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?stackable-chair"
+      },
+      {
+        "id": 13,
+        "name": "Pulse Mesh Conference Chair",
+        "price": 169.50,
+        "description": "Sleek mesh back conference chair with chrome frame and padded seat.",
+        "rating": 4.6,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?conference-chair"
+      },
+      {
+        "id": 14,
+        "name": "Contour Vinyl Visitor Chair",
+        "price": 109.99,
+        "description": "Guest seating with vinyl upholstery and chrome cantilever base.",
+        "rating": 4.1,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?visitor-chair"
+      },
+      {
+        "id": 15,
+        "name": "Scout Swivel Side Chair",
+        "price": 139.99,
+        "description": "Modern swivel side chair with padded fabric seating.",
+        "rating": 4.4,
+        "color": "Green",
+        "imageUrl": "https://source.unsplash.com/400x400/?swivel-chair"
+      }
+    ],
+    "desks": [
+      {
+        "id": 1,
+        "name": "L-Shape Corner Desk",
+        "price": 349.99,
+        "description": "Spacious desktop with scratch-resistant surface and storage shelves.",
+        "rating": 4.5,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?corner-desk"
+      },
+      {
+        "id": 2,
+        "name": "Mid-Century Modern Writing Desk",
+        "price": 229.00,
+        "description": "Walnut veneer top with tapered legs and two drawers.",
+        "rating": 4.4,
+        "color": "Walnut",
+        "imageUrl": "https://source.unsplash.com/400x400/?writing-desk"
+      },
+      {
+        "id": 3,
+        "name": "Executive Standing Desk",
+        "price": 499.00,
+        "description": "Height-adjustable electric sit-stand desk with programmable presets.",
+        "rating": 4.7,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?standing-desk"
+      },
+      {
+        "id": 4,
+        "name": "Compact Computer Desk",
+        "price": 149.50,
+        "description": "Small footprint desk with keyboard tray and CPU stand.",
+        "rating": 4.2,
+        "color": "Gray",
+        "imageUrl": "https://source.unsplash.com/400x400/?computer-desk"
+      },
+      {
+        "id": 5,
+        "name": "Rustic Farmhouse Desk",
+        "price": 279.99,
+        "description": "Distressed wood finish tabletop with X-frame legs.",
+        "rating": 4.3,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?farmhouse-desk"
+      },
+      {
+        "id": 6,
+        "name": "Glass Top Computer Desk",
+        "price": 199.99,
+        "description": "Tempered glass surface with metal frame and floating shelf.",
+        "rating": 4.1,
+        "color": "Silver",
+        "imageUrl": "https://source.unsplash.com/400x400/?glass-desk"
+      },
+      {
+        "id": 7,
+        "name": "Corner Workstation Desk",
+        "price": 329.00,
+        "description": "Multi-tier shelving and large work surface for dual monitors.",
+        "rating": 4.6,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?workstation-desk"
+      },
+      {
+        "id": 8,
+        "name": "Foldable Wall-Mounted Desk",
+        "price": 119.99,
+        "description": "Space-saving desk that folds down when not in use.",
+        "rating": 4.0,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?foldable-desk"
+      },
+      {
+        "id": 9,
+        "name": "Industrial Metal Frame Desk",
+        "price": 289.50,
+        "description": "Reclaimed wood top with powder-coated steel legs.",
+        "rating": 4.5,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?industrial-desk"
+      },
+      {
+        "id": 10,
+        "name": "Contemporary Floating Desk",
+        "price": 249.99,
+        "description": "Wall-mounted floating desk with two hidden drawers.",
+        "rating": 4.3,
+        "color": "Gray",
+        "imageUrl": "https://source.unsplash.com/400x400/?floating-desk"
+      },
+      {
+        "id": 11,
+        "name": "Adjustable Height Kids Desk",
+        "price": 129.00,
+        "description": "Perfect for children with adjustable legs and colorful accents.",
+        "rating": 4.2,
+        "color": "Blue",
+        "imageUrl": "https://source.unsplash.com/400x400/?kids-desk"
+      },
+      {
+        "id": 12,
+        "name": "Executive Glass L-Desk",
+        "price": 599.99,
+        "description": "L-shaped design with tempered glass top and chrome legs.",
+        "rating": 4.6,
+        "color": "Clear",
+        "imageUrl": "https://source.unsplash.com/400x400/?glass-l-desk"
+      },
+      {
+        "id": 13,
+        "name": "Minimalist Study Desk",
+        "price": 179.99,
+        "description": "Sleek metal frame with laminated top, easy assembly.",
+        "rating": 4.4,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?study-desk"
+      },
+      {
+        "id": 14,
+        "name": "Rustic Reclaimed Wood Desk",
+        "price": 399.00,
+        "description": "Solid reclaimed wood top with iron legs and industrial charm.",
+        "rating": 4.8,
+        "color": "Natural Wood",
+        "imageUrl": "https://source.unsplash.com/400x400/?rustic-desk"
+      },
+      {
+        "id": 15,
+        "name": "Standing Corner Desk Converter",
+        "price": 159.00,
+        "description": "Desktop riser to convert any desk into a standing workstation.",
+        "rating": 4.5,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?desk-converter"
+      }
+    ],
+    "conferenceTables": [
+      {
+        "id": 1,
+        "name": "Classic Oval Conference Table",
+        "price": 1200.00,
+        "description": "Seats up to 8, mahogany finish with cable management box.",
+        "rating": 4.6,
+        "color": "Mahogany",
+        "imageUrl": "https://source.unsplash.com/400x400/?oval-conference-table"
+      },
+      {
+        "id": 2,
+        "name": "Modern Glass Conference Table",
+        "price": 1500.50,
+        "description": "Tempered glass top with stainless steel base for 10 people.",
+        "rating": 4.7,
+        "color": "Clear",
+        "imageUrl": "https://source.unsplash.com/400x400/?glass-conference-table"
+      },
+      {
+        "id": 3,
+        "name": "Executive Boardroom Table",
+        "price": 1800.00,
+        "description": "Solid wood construction with integrated power outlets.",
+        "rating": 4.8,
+        "color": "Dark Walnut",
+        "imageUrl": "https://source.unsplash.com/400x400/?boardroom-table"
+      },
+      {
+        "id": 4,
+        "name": "Modular Training Table",
+        "price": 950.00,
+        "description": "Lightweight foldable tables that can be reconfigured for training sessions.",
+        "rating": 4.4,
+        "color": "Gray",
+        "imageUrl": "https://source.unsplash.com/400x400/?training-table"
+      },
+      {
+        "id": 5,
+        "name": "Rustic Farmhouse Conference Table",
+        "price": 1400.99,
+        "description": "Distressed wood tabletop with X-frame legs.",
+        "rating": 4.5,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?farmhouse-conference-table"
+      },
+      {
+        "id": 6,
+        "name": "Folding Conference Table",
+        "price": 699.99,
+        "description": "Portable tables with folding legs for easy storage.",
+        "rating": 4.3,
+        "color": "Beige",
+        "imageUrl": "https://source.unsplash.com/400x400/?folding-table"
+      },
+      {
+        "id": 7,
+        "name": "LED Lit Conference Table",
+        "price": 2300.00,
+        "description": "Built-in LED lighting around the tabletop edge.",
+        "rating": 4.6,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?led-table"
+      },
+      {
+        "id": 8,
+        "name": "Adjustable Height Conference Table",
+        "price": 1750.00,
+        "description": "Electric height adjustment for sit-stand meetings.",
+        "rating": 4.7,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?adjustable-table"
+      },
+      {
+        "id": 9,
+        "name": "U-Shaped Conference Table",
+        "price": 1600.00,
+        "description": "U-shaped layout ideal for presentations and discussions.",
+        "rating": 4.5,
+        "color": "Walnut",
+        "imageUrl": "https://source.unsplash.com/400x400/?u-shaped-table"
+      },
+      {
+        "id": 10,
+        "name": "Boat-Shaped Conference Table",
+        "price": 1550.00,
+        "description": "Boat-shaped design to foster collaboration.",
+        "rating": 4.4,
+        "color": "Cherry",
+        "imageUrl": "https://source.unsplash.com/400x400/?boat-table"
+      },
+      {
+        "id": 11,
+        "name": "Rectangular Conference Table",
+        "price": 1300.00,
+        "description": "Classic rectangular wood table for 12 people.",
+        "rating": 4.6,
+        "color": "Espresso",
+        "imageUrl": "https://source.unsplash.com/400x400/?rectangular-table"
+      },
+      {
+        "id": 12,
+        "name": "Round Glass Conference Table",
+        "price": 1450.00,
+        "description": "Round tempered glass top with chrome pedestal base.",
+        "rating": 4.7,
+        "color": "Clear",
+        "imageUrl": "https://source.unsplash.com/400x400/?round-glass-table"
+      },
+      {
+        "id": 13,
+        "name": "Sleek Seated Conference Table",
+        "price": 1350.00,
+        "description": "Slim design with integrated power hubs and USB ports.",
+        "rating": 4.4,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?conference-table2"
+      },
+      {
+        "id": 14,
+        "name": "Expandable Conference Table",
+        "price": 1650.00,
+        "description": "Tabletop extends to seat up to 20 attendees.",
+        "rating": 4.5,
+        "color": "Walnut",
+        "imageUrl": "https://source.unsplash.com/400x400/?expandable-table"
+      },
+      {
+        "id": 15,
+        "name": "Veneer Surface Conference Table",
+        "price": 1400.00,
+        "description": "Smooth veneer finish with hidden cable tray.",
+        "rating": 4.3,
+        "color": "Cherry",
+        "imageUrl": "https://source.unsplash.com/400x400/?veneered-table"
+      }
+    ],
+    "bookshelvesAndCabinets": [
+      {
+        "id": 1,
+        "name": "Classic 5-Tier Bookshelf",
+        "price": 149.99,
+        "description": "Solid wood construction with five adjustable shelves.",
+        "rating": 4.6,
+        "color": "Natural",
+        "imageUrl": "https://source.unsplash.com/400x400/?bookshelf"
+      },
+      {
+        "id": 2,
+        "name": "Modern Metal Frame Bookshelf",
+        "price": 199.50,
+        "description": "Industrial steel frame with wood shelves, open design.",
+        "rating": 4.5,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?modern-bookshelf"
+      },
+      {
+        "id": 3,
+        "name": "Corner Zigzag Bookshelf",
+        "price": 129.00,
+        "description": "Space-saving corner unit with zigzag shelf pattern.",
+        "rating": 4.3,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?zigzag-bookshelf"
+      },
+      {
+        "id": 4,
+        "name": "Wall-Mounted Floating Shelves",
+        "price": 89.99,
+        "description": "Set of 4 floating shelves with hidden bracket support.",
+        "rating": 4.4,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?floating-shelves"
+      },
+      {
+        "id": 5,
+        "name": "Adjustable Ladder Shelf",
+        "price": 179.99,
+        "description": "Lean-back ladder design with five adjustable shelves.",
+        "rating": 4.6,
+        "color": "Gray",
+        "imageUrl": "https://source.unsplash.com/400x400/?ladder-shelf"
+      },
+      {
+        "id": 6,
+        "name": "Cube Storage Cabinet",
+        "price": 139.00,
+        "description": "9-cube organizer with removable fabric bins.",
+        "rating": 4.2,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?cube-storage"
+      },
+      {
+        "id": 7,
+        "name": "Tall Enclosed Cabinet",
+        "price": 249.99,
+        "description": "Full-height cabinet with doors and adjustable interior shelves.",
+        "rating": 4.7,
+        "color": "Espresso",
+        "imageUrl": "https://source.unsplash.com/400x400/?storage-cabinet"
+      },
+      {
+        "id": 8,
+        "name": "Glass Display Cabinet",
+        "price": 299.50,
+        "description": "Tempered glass doors and side panels with interior lighting.",
+        "rating": 4.5,
+        "color": "Clear",
+        "imageUrl": "https://source.unsplash.com/400x400/?display-cabinet"
+      },
+      {
+        "id": 9,
+        "name": "Rolling Library Cart",
+        "price": 99.99,
+        "description": "Mobile bookshelf on wheels with three tiers.",
+        "rating": 4.1,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?library-cart"
+      },
+      {
+        "id": 10,
+        "name": "Rustic Wood Storage Cabinet",
+        "price": 219.00,
+        "description": "Distressed wood finish with two drawers and two doors.",
+        "rating": 4.4,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?rustic-cabinet"
+      },
+      {
+        "id": 11,
+        "name": "Corner Wood Cabinet",
+        "price": 179.50,
+        "description": "Compact corner cabinet with closed doors and shelf.",
+        "rating": 4.3,
+        "color": "Oak",
+        "imageUrl": "https://source.unsplash.com/400x400/?corner-cabinet"
+      },
+      {
+        "id": 12,
+        "name": "Revolving Bookcase",
+        "price": 249.99,
+        "description": "360° rotating bookcase with five tiers.",
+        "rating": 4.6,
+        "color": "White",
+        "imageUrl": "https://source.unsplash.com/400x400/?rotating-bookcase"
+      },
+      {
+        "id": 13,
+        "name": "Floating Ladder Cabinet",
+        "price": 199.99,
+        "description": "Stylish ladder-style cabinet with enclosed bottom shelf.",
+        "rating": 4.5,
+        "color": "Black",
+        "imageUrl": "https://source.unsplash.com/400x400/?ladder-cabinet"
+      },
+      {
+        "id": 14,
+        "name": "Mid-Century Bamboo Bookshelf",
+        "price": 229.00,
+        "description": "Eco-friendly bamboo shelves with tapered legs.",
+        "rating": 4.4,
+        "color": "Natural",
+        "imageUrl": "https://source.unsplash.com/400x400/?bamboo-bookshelf"
+      },
+      {
+        "id": 15,
+        "name": "Industrial Pipe & Wood Shelf",
+        "price": 189.00,
+        "description": "Reclaimed wood shelves on metal pipe frame.",
+        "rating": 4.7,
+        "color": "Brown",
+        "imageUrl": "https://source.unsplash.com/400x400/?industrial-shelf"
+      }
+    ]
+  }
+  
