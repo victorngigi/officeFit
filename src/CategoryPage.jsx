@@ -1,23 +1,29 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 
 const CategoryPage = ({ categories }) => {
   const { categoryId } = useParams();
-  const category = categories.find(cat => cat.route === categoryId);
 
-  if (!category) {
-    return <div>Category not found!</div>;
-  }
+  // Find the selected category
+  const selectedCategory = categories.find((cat) => cat.route === categoryId);
 
   return (
-    <div>
-      <h2>{category.name}</h2>
-      <div>
-        {category.products.map((product, index) => (
-          <div key={index}>
+    <div className="category-page">
+      <h2>{selectedCategory?.name}</h2>
+      <div className="carousel-container">
+        {selectedCategory?.products.map((product, index) => (
+          <div key={index} className="carousel-item">
             <img src={product.image} alt={product.name} />
-            <p>{product.name} - ${product.price}</p>
-            <Link to={`/product/${index}`}><button>View Details</button></Link>
+            <div className="overlay">
+              <h2>{product.name}</h2>
+              <p>${product.price}</p>
+              <button className="overlay-button" onClick={() => {}}>
+                Add to Cart
+              </button>
+              <Link to={`/product/${product.name}`} className="view-link">
+                View Details
+              </Link>
+            </div>
           </div>
         ))}
       </div>
