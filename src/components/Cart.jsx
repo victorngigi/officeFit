@@ -18,7 +18,8 @@ export default function Cart() {
                 <img src={item.imageUrl} alt={item.name} className="w-16 h-16 rounded object-cover" />
                 <div className="ml-4">
                   <p className="font-medium">{item.name}</p>
-                  <p className="text-sm text-gray-500">${item.price} x {item.quantity}</p>
+                  <p className="text-sm text-gray-500">${item.price.toFixed(2)} x {item.quantity}</p>
+                  <p className="text-sm text-gray-500">Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
