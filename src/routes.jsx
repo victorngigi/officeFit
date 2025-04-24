@@ -7,7 +7,7 @@ import DeskPage from './pages/DeskPage';
 import ConferenceTablePage from './pages/ConferenceTablePage';
 import BookshelfCabinetPage from './pages/BookshelfCabinetPage';
 import ChairPage from './pages/ChairPage';
-import ViewProduct from './components/ViewProduct';  // Adjust this import based on your file structure
+import ViewProduct from './components/ViewProduct';  
 
 export default function AppRoutes() {
   const routes = useRoutes([
@@ -17,7 +17,7 @@ export default function AppRoutes() {
     { path: '/products/conference-tables', element: <ConferenceTablePage /> },
     { path: '/products/chairs', element: <ChairPage /> },
     { path: '/products/bookshelves-cabinets', element: <BookshelfCabinetPage /> },
-    { path: '/viewproduct/:category/:id', element: <ViewProduct /> },  // Make sure this is correct
+    { path: '/viewproduct/:category/:id', element: <ViewProduct /> }, 
     { path: '/cart', element: <Cart /> },
     { path: '/checkout', element: <Checkout /> },
     { path: '*', element: <Navigate to="/products" replace /> }
