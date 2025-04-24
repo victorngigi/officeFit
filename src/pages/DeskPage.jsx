@@ -7,7 +7,7 @@ const DeskPage = () => {
     // Simulate fetching data from db.json
     fetch("/db.json")
       .then((response) => response.json())
-      .then((data) => setDesks(data.desks)) // Assuming 'desks' is in the JSON structure
+      .then((data) => setDesks(data.desks || [])) // Safeguard fallback
       .catch((error) => console.log("Error fetching data:", error));
   }, []);
 
@@ -29,6 +29,7 @@ const DeskPage = () => {
               <h3 className="text-xl font-semibold text-gray-700">{desk.name}</h3>
               <p className="text-gray-500">{desk.description}</p>
               <p className="text-lg font-bold text-gray-800 mt-2">${desk.price}</p>
+              <p className="text-yellow-500">⭐ {desk.rating}</p>
             </div>
           ))
         ) : (

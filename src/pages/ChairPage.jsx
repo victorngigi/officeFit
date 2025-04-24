@@ -15,10 +15,15 @@ const ChairsPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {chairs.map((chair) => (
           <div key={chair.id} className="bg-white p-4 rounded-xl shadow-md">
-            <img src={chair.imageUrl} alt={chair.name} className="rounded-lg mb-4" />
+            <img
+              src={chair.imageUrl}
+              alt={chair.name}
+              className="rounded-lg mb-4 w-full h-48 object-cover"
+            />
             <h3 className="text-xl font-semibold">{chair.name}</h3>
             <p className="text-gray-600">{chair.description}</p>
             <p className="text-blue-600 font-bold mt-2">${chair.price}</p>
+            <p className="text-yellow-500">⭐ {chair.rating}</p> {/* ⭐ Ratings in action! */}
           </div>
         ))}
       </div>

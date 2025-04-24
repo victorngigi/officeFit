@@ -15,10 +15,15 @@ const TablesPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {tables.map((table) => (
           <div key={table.id} className="bg-white p-4 rounded-xl shadow-md">
-            <img src={table.imageUrl} alt={table.name} className="rounded-lg mb-4" />
+            <img
+              src={table.imageUrl}
+              alt={table.name}
+              className="rounded-lg mb-4 w-full h-48 object-cover"
+            />
             <h3 className="text-xl font-semibold">{table.name}</h3>
             <p className="text-gray-600">{table.description}</p>
             <p className="text-blue-600 font-bold mt-2">${table.price}</p>
+            <p className="text-yellow-500">⭐ {table.rating}</p>
           </div>
         ))}
       </div>
