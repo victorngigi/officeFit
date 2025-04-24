@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from "../assets/logo.png"
-
+import cartIcon from "../assets/cart.png"
 export default function NavBar() {
   return (
     <div>
@@ -22,8 +22,9 @@ export default function NavBar() {
 
     {/* Cart */}
     <div className="flex-1 flex justify-end">
-      <button>
-        <i className="bx bx-cart text-3xl text-gray-700"></i>
+      <button className="flex items-center gap-2">
+        <img src={cartIcon} alt="cart" className="w-6 h-6"/>
+        <span className="text-black font-bold">Cart</span>
       </button>
     </div>
   </header>
