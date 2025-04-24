@@ -7,7 +7,7 @@ export default function ProductPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/db.json')
+    fetch(import.meta.env.BASE_URL + 'db.json')
       .then(res => res.json())
       .then(setData);
   }, []);
@@ -20,7 +20,7 @@ export default function ProductPage() {
   ];
 
   return (
-    <div className="p-6 space-y-12">
+    <div className="max-w-7xl mx-auto p-6 space-y-12">
       {data &&
         categories.map(({ key, title, path }) => {
           const sortedProducts = [...(data[key] || [])].sort((a, b) => b.rating - a.rating);
@@ -28,16 +28,17 @@ export default function ProductPage() {
 
           return (
             <div key={key}>
-              <h2 className="text-2xl font-semibold mb-4">{title}</h2>
+              <h2 className="text-3xl font-bold mb-6">{title}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 {top4.map(product => (
                   <ProductCard key={product.id} product={product} category={key} />
                 ))}
                 <div
                   onClick={() => navigate(`/products/${path}`)}
-                  className="cursor-pointer bg-gray-100 rounded-xl flex items-center justify-center text-blue-600 font-semibold hover:underline hover:bg-gray-200 transition"
+                  className="h-full cursor-pointer bg-gray-100 rounded-xl flex flex-col items-center justify-center text-blue-600 font-semibold hover:underline hover:bg-gray-200 transition min-h-[200px]"
                 >
-                  See more →
+                  <span>See more</span>
+                  <span className="text-2xl mt-1"></span>
                 </div>
               </div>
             </div>
