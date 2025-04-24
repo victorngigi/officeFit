@@ -18,7 +18,7 @@ export default function Cart() {
                 <img src={item.imageUrl} alt={item.name} className="w-16 h-16 rounded object-cover" />
                 <div className="ml-4">
                   <p className="font-medium">{item.name}</p>
-                  <p className="text-sm text-gray-500">${item.price} × {item.quantity}</p>
+                  <p className="text-sm text-gray-500">${item.price} x {item.quantity}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
@@ -26,7 +26,7 @@ export default function Cart() {
                   onClick={() => dispatch({ type: 'UPDATE_QTY', payload: { id: item.id, quantity: item.quantity - 1 } })}
                   disabled={item.quantity === 1}
                 >
-                  −
+                  -
                 </button>
                 <span>{item.quantity}</span>
                 <button onClick={() => dispatch({ type: 'UPDATE_QTY', payload: { id: item.id, quantity: item.quantity + 1 } })}>
