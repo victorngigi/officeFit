@@ -1,25 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import ProductCard from '../components/ProductCard';
 
 export default function ProductPage() {
+  const [data, setData] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('/db.json')
+      .then(res => res.json())
+      .then(setData);
+  }, []);
+
+  const categories = [
+    { key: 'chairs', title: 'Chairs', path: 'chairs' },
+    { key: 'desks', title: 'Desks', path: 'desks' },
+    { key: 'conferenceTables', title: 'Conference Tables', path: 'conference-tables' },
+    { key: 'bookshelvesAndCabinets', title: 'Bookshelves & Cabinets', path: 'bookshelves-cabinets' }
+  ];
+
   return (
-    <div>
-      <h1>Explore Our Office Furniture</h1>
-      <p>
-        We believe your workspace should inspire you to do your best work. That's why we offer a
-        wide range of office furniture designed to bring comfort, style, and productivity to your day.
-        From strong desks to supportive chairs and practical storage, we’ve got everything your
-        office needs.
-      </p>
-      <p>
-        Start exploring:
-      </p>
-      <ul>
-        <li><Link to="/products/desks">Desks</Link></li>
-        <li><Link to="/products/chairs">Chairs</Link></li>
-        <li><Link to="/products/conference-tables">Conference Tables</Link></li>
-        <li><Link to="/products/bookshelves-cabinets">Bookshelves & Cabinets</Link></li>
-      </ul>
+    <div className="p-6 space-y-12">
+      {data &&
+        categories.map(({ key, title, path }) => {
+          const sortedProducts = [...(data[key] || [])].sort((a, b) => b.rating - a.rating);
+          const top4 = sortedProducts.slice(0, 4);
+
+          return (
+            <div key={key}>
+              <h2 className="text-2xl font-semibold mb-4">{title}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {top4.map(product => (
+                  <ProductCard key={product.id} product={product} category={key} />
+                ))}
+                <div
+                  onClick={() => navigate(`/products/${path}`)}
+                  className="cursor-pointer bg-gray-100 rounded-xl flex items-center justify-center text-blue-600 font-semibold hover:underline hover:bg-gray-200 transition"
+                >
+                  See more →
+                </div>
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 }
