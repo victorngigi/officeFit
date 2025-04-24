@@ -17,7 +17,7 @@ export default function ViewProduct() {
   };
 
   useEffect(() => {
-    fetch("/db.json")
+    fetch(import.meta.env.BASE_URL + 'db.json')
       .then((res) => res.json())
       .then((data) => {
         const key = slugToKey[category] || category;
@@ -30,7 +30,7 @@ export default function ViewProduct() {
 
   return (
     <div className="min-h-screen flex justify-center items-center p-10">
-      <div className="max-w-md w-full">
+      <div className="max-w-md w-full h-full">
         <ProductCard
           product={product}
           category={category}

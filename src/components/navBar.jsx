@@ -22,10 +22,10 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/products" className="flex items-center">
           <img src={logo} alt="logo" className="w-12 h-12" />
-          <span className="ml-2 text-xl font-bold text-gray-800">OfficeFit</span>
+          <span className="ml-2 text-4xl font-bold text-gray-800">OfficeFit Furniture</span>
         </Link>
 
-        <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1 w-1/3">
+        <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1 w-3/5">
           <i className="bx bx-search text-xl text-gray-500 mr-2" />
           <input
             type="text"
@@ -81,7 +81,7 @@ export default function NavBar() {
           <Link to="/products/chairs" className="hover:text-gray-900">Chairs</Link>
           <Link to="/products/desks" className="hover:text-gray-900">Desks</Link>
           <Link to="/products/conference-tables" className="hover:text-gray-900">Conference Tables</Link>
-          <Link to="/products/bookshelves-cabinets" className="hover:text-gray-900">Cabinets & Bookshelves</Link>
+          <Link to="/products/bookshelves-cabinets" className="hover:text-gray-900">Bookshelves & Cabinets</Link>
         </div>
       </nav>
     </div>
