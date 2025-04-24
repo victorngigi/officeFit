@@ -9,17 +9,9 @@ export default function Checkout() {
 
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + 'db.json')
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      })
+      .then(res => res.json())
       .then(data => {
         setProductsData(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setError(err);
         setLoading(false);
       });
   }, []);
@@ -27,7 +19,6 @@ export default function Checkout() {
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   if (loading) return <p className="p-6 text-center">Loading products…</p>;
-  if (error)   return <p className="p-6 text-center text-red-600">Error: {error.message}</p>;
 
   return (
     <div className="max-w-7xl mx-auto p-6">
