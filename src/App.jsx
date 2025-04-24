@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import NavBar from './components/navBar.jsx'
+=======
+import { BrowserRouter } from 'react-router-dom';
+import Footer from "./components/footer.jsx"
+import './App.css';
+import AppRoutes from './routes';
+import NavBar from './components/NavBar';
 import Footer from "./components/footer.jsx"
 
 function App() {
-
-
   return (
-    <>
-      <NavBar/>
-      <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <NavBar />
+      <AppRoutes />
+    <Footer/>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
