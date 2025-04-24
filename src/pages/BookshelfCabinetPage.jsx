@@ -25,7 +25,6 @@ const CabinetsPage = () => {
             <p className="text-sm text-gray-500">Color: {cabinet.color}</p>
             <div className="flex justify-between items-center mt-3">
               <span className="text-blue-600 font-bold">${cabinet.price}</span>
-              
               <span className="text-yellow-500">⭐ {cabinet.rating}</span>
             </div>
           </div>
