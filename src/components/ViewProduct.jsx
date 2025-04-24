@@ -1,8 +1,8 @@
-// src/components/ViewProduct.jsx
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ProductCard from "./ProductCard";
+import { toast } from "react-hot-toast";
 
 export default function ViewProduct() {
   const [product, setProduct] = useState(null);
@@ -35,9 +35,9 @@ export default function ViewProduct() {
           product={product}
           category={category}
           disableNavigation
-          onAddToCart={() =>
+          onAddToCart={() => {
             dispatch({
-              type: "ADD_TO_CART",
+              type: "ADD_ITEM",
               payload: {
                 id: product.id,
                 name: product.name,
@@ -45,8 +45,10 @@ export default function ViewProduct() {
                 quantity: 1,
                 imageUrl: product.imageUrl,
               },
-            })
-          }
+            });
+
+            toast.success(`${product.name} added to cart`);
+          }}
         />
       </div>
     </div>
