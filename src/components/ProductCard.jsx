@@ -33,7 +33,7 @@ export default function ProductCard({ product, category, disableNavigation, onAd
             e.stopPropagation();
             onAddToCart();
           }}
-          className="mt-4 py-2 px-4 bg-black text-white rounded-md w-full"
+          className="mt-4 py-2 px-4 bg-black text-white rounded-md w-full hover:bg-gray-800 transition duration-200"
         >
           Add to cart
         </button>
