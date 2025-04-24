@@ -1,12 +1,16 @@
-import React from "react";
-import Products from "./components/Products";
+
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes';
+import NavBar from './components/navBar.jsx';
+import Footer from "./components/footer.jsx"
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-center py-8">🪑 OfficeFit Product Showcase</h1>
-      <Products />
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <AppRoutes />
+      <Footer/>
+    </BrowserRouter>
   );
 }
 
