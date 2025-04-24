@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-export default function ChairPage() {
+const ChairsPage = () => {
+  const [chairs, setChairs] = useState([]);
+
+  useEffect(() => {
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => setChairs(data.chairs || []));
+  }, []);
+
   return (
-    <div>
-      <h1>Office Chairs</h1>
-      <p>
-        Comfort at work matters — and it starts with your chair. Our office chairs are made with
-        soft cushions, adjustable height, and strong back support to help you sit comfortably for hours.
-        Say goodbye to back pain and hello to better focus.
-      </p>
-      <p>
-        Whether you need a sleek executive chair or a simple and sturdy everyday seat, we’ve got you
-        covered. Make your workspace more supportive and stylish today. Your back will thank you!
-      </p>
+    <div className="p-6">
+      <h2 className="text-3xl font-bold mb-4">Chairs</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {chairs.map((chair) => (
+          <div key={chair.id} className="bg-white p-4 rounded-xl shadow-md">
+            <img src={chair.imageUrl} alt={chair.name} className="rounded-lg mb-4" />
+            <h3 className="text-xl font-semibold">{chair.name}</h3>
+            <p className="text-gray-600">{chair.description}</p>
+            <p className="text-blue-600 font-bold mt-2">${chair.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default ChairsPage;

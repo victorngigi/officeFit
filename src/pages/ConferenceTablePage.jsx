@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-export default function ConferenceTablePage() {
+const TablesPage = () => {
+  const [tables, setTables] = useState([]);
+
+  useEffect(() => {
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => setTables(data.conferenceTables || []));
+  }, []);
+
   return (
-    <div>
-      <h1>Conference Tables</h1>
-      <p>
-        Meetings matter. That’s why our conference tables are designed to bring your team together
-        in comfort and style. They’re spacious, durable, and perfect for everything from brainstorms
-        to board meetings.
-      </p>
-      <p>
-        Choose from modern or classic designs to fit your office’s personality. These tables are not
-        just furniture — they help create a space where ideas grow and decisions happen. Ready to
-        transform your meeting room? Get yours today.
-      </p>
+    <div className="p-6">
+      <h2 className="text-3xl font-bold mb-4">Conference Tables</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {tables.map((table) => (
+          <div key={table.id} className="bg-white p-4 rounded-xl shadow-md">
+            <img src={table.imageUrl} alt={table.name} className="rounded-lg mb-4" />
+            <h3 className="text-xl font-semibold">{table.name}</h3>
+            <p className="text-gray-600">{table.description}</p>
+            <p className="text-blue-600 font-bold mt-2">${table.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default TablesPage;

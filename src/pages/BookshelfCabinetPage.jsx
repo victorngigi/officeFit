@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-export default function BookshelfCabinetPage() {
+const CabinetsPage = () => {
+  const [cabinets, setCabinets] = useState([]);
+
+  useEffect(() => {
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => setCabinets(data.cabinets || []));
+  }, []);
+
   return (
-    <div>
-      <h1>Bookshelves & Cabinets</h1>
-      <p>
-        A tidy space is a focused space. Our bookshelves and cabinets are perfect for storing books,
-        files, and office supplies while keeping your space looking clean and professional. Built to
-        last and designed to impress, they add function and elegance to any room.
-      </p>
-      <p>
-        Whether you're decorating your home office or organizing a corporate setting, these storage
-        solutions make your day smoother and your space smarter. Get organized today — your office
-        will thank you.
-      </p>
+    <div className="p-6">
+      <h2 className="text-3xl font-bold mb-4">Cabinets</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cabinets.map((cabinet) => (
+          <div key={cabinet.id} className="bg-white p-4 rounded-xl shadow-lg">
+            <img
+              src={cabinet.imageUrl}
+              alt={cabinet.name}
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-semibold">{cabinet.name}</h3>
+            <p className="text-gray-600 mb-2">{cabinet.description}</p>
+            <p className="text-sm text-gray-500">Color: {cabinet.color}</p>
+            <div className="flex justify-between items-center mt-3">
+              <span className="text-blue-600 font-bold">${cabinet.price}</span>
+              <span className="text-yellow-500">⭐ {cabinet.rating}</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default CabinetsPage;

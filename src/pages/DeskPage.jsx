@@ -1,20 +1,42 @@
-// src/pages/DeskPage.jsx
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
-export default function DeskPage() {
+const DeskPage = () => {
+  const [desks, setDesks] = useState([]);
+
+  useEffect(() => {
+    // Simulate fetching data from db.json
+    fetch("/db.json")
+      .then((response) => response.json())
+      .then((data) => setDesks(data.desks)) // Assuming 'desks' is in the JSON structure
+      .catch((error) => console.log("Error fetching data:", error));
+  }, []);
+
   return (
-    <div>
-      <h1>Office Desks</h1>
-      <p>
-        A good desk is the heart of every productive workspace. Our office desks are designed to
-        help you stay focused, organized, and comfortable. Whether you're working from home or in
-        a busy office, these desks offer plenty of space for your computer, notebooks, and everything else you need within reach.
-      </p>
-      <p>
-        Crafted from durable materials and finished with a sleek, modern look, our desks not only
-        perform well — they also look amazing in any setting. Buy one today and experience the
-        perfect mix of function and style.
-      </p>
+    <div className="p-8 bg-gray-50 min-h-screen">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        Desks Collection
+      </h2>
+
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {desks.length > 0 ? (
+          desks.map((desk) => (
+            <div key={desk.id} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+              <img
+                src={desk.imageUrl}
+                alt={desk.name}
+                className="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-700">{desk.name}</h3>
+              <p className="text-gray-500">{desk.description}</p>
+              <p className="text-lg font-bold text-gray-800 mt-2">${desk.price}</p>
+            </div>
+          ))
+        ) : (
+          <p>Loading desks...</p>
+        )}
+      </div>
     </div>
   );
-}
+};
+
+export default DeskPage;
