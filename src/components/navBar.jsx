@@ -48,10 +48,10 @@ export default function NavBar() {
           </button>
 
           {open && (
-            <div className="absolute right-0 mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+            <div className="absolute right-0 top-full mt-1 w-72 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">Your Cart</h3>
-                <ul className="max-h-48 overflow-y-auto space-y-2">
+                <ul className="max-h-64 overflow-y-auto space-y-2">
                   {items.map(item => (
                     <li key={item.id} className="flex justify-between text-gray-800">
                       <span className="truncate w-40">{item.name}</span>
