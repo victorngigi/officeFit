@@ -9,10 +9,11 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold mb-4">Products</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#" className="hover:text-white">Home</a></li>
-            <li><a href="#" className="hover:text-white">Features</a></li>
-            <li><a href="#" className="hover:text-white">Pricing</a></li>
-            <li><a href="#" className="hover:text-white">FAQs</a></li>
+            <li><a href="#" className="hover:text-white">Products</a></li>
+            <li><a href="#" className="hover:text-white">Chairs</a></li>
+            <li><a href="#" className="hover:text-white">Desks</a></li>
+            <li><a href="#" className="hover:text-white">Conference Tables</a></li>
+            <li><a href="#" className="hover:text-white">Cabinets & Bookshelves</a></li>
           </ul>
         </div>
 
