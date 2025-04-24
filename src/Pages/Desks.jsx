@@ -5,8 +5,8 @@ const Desks = () => {
   const [desks, setDesks] = useState([]);
 
   useEffect(() => {
-    // fetch("/db.json")
-    fetch("http://localhost:3001/desks") // for Desks.jsx
+    fetch("/db.json")
+    // fetch("http://localhost:3001/desks") // for Desks.jsx
       .then(res => res.json())
       .then(data => setDesks(data.desks));
   }, []);

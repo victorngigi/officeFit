@@ -5,8 +5,8 @@ const Bookshelves = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // fetch("/db.json")
-    fetch("http://localhost:3001/bookshelvesAndCabinets") // for Bookshelves.jsx
+    fetch("/db.json")
+    // fetch("http://localhost:3001/bookshelvesAndCabinets") // for Bookshelves.jsx
       .then(res => res.json())
       .then(data => setItems(data.bookshelvesAndCabinets));
   }, []);

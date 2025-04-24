@@ -5,8 +5,8 @@ const Chairs = () => {
   const [chairs, setChairs] = useState([]);
 
   useEffect(() => {
-    // fetch("/db.json")
-    fetch("http://localhost:3001/chairs") // for Chairs.jsx
+    fetch("/db.json")
+    // fetch("http://localhost:3001/chairs") // for Chairs.jsx
       .then(res => res.json())
       .then(data => setChairs(data.chairs));
   }, []);

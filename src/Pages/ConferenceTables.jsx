@@ -5,8 +5,8 @@ const ConferenceTables = () => {
   const [tables, setTables] = useState([]);
 
   useEffect(() => {
-    // fetch("/db.json")
-    fetch("http://localhost:3001/conferenceTables") // for ConferenceTables.jsx
+    fetch("/db.json")
+    // fetch("http://localhost:3001/conferenceTables") // for ConferenceTables.jsx
       .then(res => res.json())
       .then(data => setTables(data.conferenceTables));
   }, []);
