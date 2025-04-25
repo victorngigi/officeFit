@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10 px-6 md:px-32">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto p-6 space-y-4">
         
         {/* Product Links */}
         <div>
@@ -13,7 +13,7 @@ export default function Footer() {
             <li><a href="/products/chairs" className="hover:text-white">Chairs</a></li>
             <li><a href="products/desks" className="hover:text-white">Desks</a></li>
             <li><a href="/products/conference-tables" className="hover:text-white">Conference Tables</a></li>
-            <li><a href="/products/bookshelves-cabinets" className="hover:text-white">Cabinets & Bookshelves</a></li>
+            <li><a href="/products/bookshelves-cabinets" className="hover:text-white">Bookshelves & Cabinets</a></li>
           </ul>
         </div>
 

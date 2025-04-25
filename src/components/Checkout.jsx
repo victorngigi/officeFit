@@ -1,22 +1,27 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React, { useState, useEffect, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 export default function Checkout() {
-  const { state: { items: cartItems } } = useContext(CartContext);
+  const {
+    state: { items: cartItems },
+  } = useContext(CartContext);
   const [productsData, setProductsData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + 'db.json')
-      .then(res => res.json())
-      .then(data => {
+    fetch(import.meta.env.BASE_URL + "db.json")
+      .then((res) => res.json())
+      .then((data) => {
         setProductsData(data);
         setLoading(false);
       });
   }, []);
 
-  const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   if (loading) return <p className="p-6 text-center">Loading products…</p>;
 
@@ -27,16 +32,30 @@ export default function Checkout() {
         <div className="lg:col-span-2">
           <h2 className="text-2xl font-medium mb-4">Shopping Cart</h2>
           <ul className="space-y-4">
-            {cartItems.map(item => (
-              <li key={item.id} className="flex items-center justify-between border-b pb-4">
+            {cartItems.map((item) => (
+              <li
+                key={item.id}
+                className="flex items-center justify-between border-b pb-4"
+              >
                 <div className="flex items-center">
-                  <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded" />
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className="w-16 h-16 object-cover rounded"
+                  />
                   <div className="ml-4">
                     <p className="font-medium">{item.name}</p>
-                    <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
+                    <p className="text-sm text-gray-500">
+                      Qty: {item.quantity}
+                    </p>
                   </div>
                 </div>
-                <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                <p className="text-sm text-gray-500">
+                  ${item.price.toFixed(2)} x {item.quantity}
+                </p>
+                <p className="text-sm text-gray-500">
+                  Subtotal: ${(item.price * item.quantity).toFixed(2)}
+                </p>
               </li>
             ))}
           </ul>
@@ -44,9 +63,11 @@ export default function Checkout() {
         <aside className="bg-gray-50 p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-medium mb-4">Order Summary</h2>
           <div className="space-y-2 mb-4">
-            {cartItems.map(item => (
+            {cartItems.map((item) => (
               <div key={item.id} className="flex justify-between">
-                <span>{item.name} (x{item.quantity})</span>
+                <span>
+                  {item.name} (x{item.quantity})
+                </span>
                 <span>${(item.price * item.quantity).toFixed(2)}</span>
               </div>
             ))}
@@ -55,9 +76,7 @@ export default function Checkout() {
             <span>Total:</span>
             <span>${totalPrice.toFixed(2)}</span>
           </div>
-          <button
-            className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-          >
+          <button className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
             Complete Purchase
           </button>
         </aside>

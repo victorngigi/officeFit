@@ -1,8 +1,8 @@
-// src/components/ViewProduct.jsx
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ProductCard from "./ProductCard";
+import { toast } from "react-hot-toast";
 
 export default function ViewProduct() {
   const [product, setProduct] = useState(null);
@@ -17,7 +17,7 @@ export default function ViewProduct() {
   };
 
   useEffect(() => {
-    fetch("/db.json")
+    fetch(import.meta.env.BASE_URL + 'db.json')
       .then((res) => res.json())
       .then((data) => {
         const key = slugToKey[category] || category;
@@ -30,14 +30,14 @@ export default function ViewProduct() {
 
   return (
     <div className="min-h-screen flex justify-center items-center p-10">
-      <div className="max-w-md w-full">
+      <div className="max-w-md w-full h-full">
         <ProductCard
           product={product}
           category={category}
           disableNavigation
-          onAddToCart={() =>
+          onAddToCart={() => {
             dispatch({
-              type: "ADD_TO_CART",
+              type: "ADD_ITEM",
               payload: {
                 id: product.id,
                 name: product.name,
@@ -45,8 +45,10 @@ export default function ViewProduct() {
                 quantity: 1,
                 imageUrl: product.imageUrl,
               },
-            })
-          }
+            });
+
+            toast.success(`${product.name} added to cart`);
+          }}
         />
       </div>
     </div>
