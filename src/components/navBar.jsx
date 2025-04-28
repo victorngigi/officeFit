@@ -1,20 +1,23 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
-import { CartContext } from '../context/CartContext';
+import React, { useState, useContext, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import { CartContext } from "../context/CartContext";
+import Search from "../components/Search";
 
 export default function NavBar() {
-  const { state: { items } } = useContext(CartContext);
+  const {
+    state: { items },
+  } = useContext(CartContext);
   const [open, setOpen] = useState(false);
   const ref = useRef();
   const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   useEffect(() => {
-    const handleClickOutside = e => {
+    const handleClickOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false);
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -22,22 +25,19 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/products" className="flex items-center">
           <img src={logo} alt="logo" className="w-12 h-12" />
-          <span className="ml-2 text-4xl font-bold text-gray-800">OfficeFit Furniture</span>
+          <span className="ml-2 text-4xl font-bold text-gray-800">
+            OfficeFit Furniture
+          </span>
         </Link>
 
-        <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1 w-3/5">
-          <i className="bx bx-search text-xl text-gray-500 mr-2" />
-          <input
-            type="text"
-            placeholder="Search products..."
-            className="bg-transparent focus:outline-none w-full text-gray-700"
-          />
+        <div className="flex items-center bg-gray-100 rounded-full px-4 py-1 w-full md:w-3/5 relative">
+          <Search />
         </div>
 
         <div className="relative flex items-center" ref={ref}>
           <button
             className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
-            onClick={() => setOpen(o => !o)}
+            onClick={() => setOpen((o) => !o)}
           >
             <i className="bx bx-cart text-2xl text-gray-700" />
             {items.length > 0 && (
@@ -52,8 +52,11 @@ export default function NavBar() {
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">Your Cart</h3>
                 <ul className="max-h-64 overflow-y-auto space-y-2">
-                  {items.map(item => (
-                    <li key={item.id} className="flex justify-between text-gray-800">
+                  {items.map((item) => (
+                    <li
+                      key={item.id}
+                      className="flex justify-between text-gray-800"
+                    >
                       <span className="truncate w-40">{item.name}</span>
                       <span>KSH {(item.price * item.quantity).toFixed(2)}</span>
                     </li>
@@ -77,11 +80,27 @@ export default function NavBar() {
 
       <nav className="bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-2 flex space-x-8 text-sm font-medium text-gray-600">
-          <Link to="/products" className="hover:text-gray-900">All Products</Link>
-          <Link to="/products/chairs" className="hover:text-gray-900">Chairs</Link>
-          <Link to="/products/desks" className="hover:text-gray-900">Desks</Link>
-          <Link to="/products/conference-tables" className="hover:text-gray-900">Conference Tables</Link>
-          <Link to="/products/bookshelves-cabinets" className="hover:text-gray-900">Bookshelves & Cabinets</Link>
+          <Link to="/products" className="hover:text-gray-900">
+            All Products
+          </Link>
+          <Link to="/products/chairs" className="hover:text-gray-900">
+            Chairs
+          </Link>
+          <Link to="/products/desks" className="hover:text-gray-900">
+            Desks
+          </Link>
+          <Link
+            to="/products/conference-tables"
+            className="hover:text-gray-900"
+          >
+            Conference Tables
+          </Link>
+          <Link
+            to="/products/bookshelves-cabinets"
+            className="hover:text-gray-900"
+          >
+            Bookshelves & Cabinets
+          </Link>
         </div>
       </nav>
     </div>
