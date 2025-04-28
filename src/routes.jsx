@@ -17,7 +17,7 @@ export default function AppRoutes() {
     { path: '/products/conference-tables', element: <ConferenceTablePage /> },
     { path: '/products/chairs', element: <ChairPage /> },
     { path: '/products/bookshelves-cabinets', element: <BookshelfCabinetPage /> },
-    { path: '/viewproduct/:category/:productId', element: <ViewProduct /> },
+    { path: '/products/:category/:productId', element: <ViewProduct /> },
     { path: '/cart', element: <Cart /> },
     { path: '/checkout', element: <Checkout /> },
     { path: '*', element: <Navigate to="/products" replace /> }

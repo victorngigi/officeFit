@@ -28,7 +28,7 @@ export default function ProductCard({ product, category, disableNavigation, onAd
         <p className="text-gray-600">{product.description}</p>
       </div>
       <div className="flex items-center justify-between mt-4">
-        <p className="text-blue-600 font-bold">${product.price}</p>
+        <p className="text-blue-600 font-bold">KSH {product.price}</p>
         <p className="text-yellow-500">⭐ {product.rating}</p>
       </div>
       {disableNavigation && onAddToCart && (

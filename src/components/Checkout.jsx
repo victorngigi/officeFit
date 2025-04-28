@@ -51,10 +51,10 @@ export default function Checkout() {
                   </div>
                 </div>
                 <p className="text-sm text-gray-500">
-                  ${item.price.toFixed(2)} x {item.quantity}
+                  KSH {item.price.toFixed(2)} x {item.quantity}
                 </p>
                 <p className="text-sm text-gray-500">
-                  Subtotal: ${(item.price * item.quantity).toFixed(2)}
+                  Subtotal: KSH {(item.price * item.quantity).toFixed(2)}
                 </p>
               </li>
             ))}
@@ -68,13 +68,13 @@ export default function Checkout() {
                 <span>
                   {item.name} (x{item.quantity})
                 </span>
-                <span>${(item.price * item.quantity).toFixed(2)}</span>
+                <span>KSH {(item.price * item.quantity).toFixed(2)}</span>
               </div>
             ))}
           </div>
           <div className="flex justify-between border-t pt-4 font-semibold text-lg">
             <span>Total:</span>
-            <span>${totalPrice.toFixed(2)}</span>
+            <span>KSH {totalPrice.toFixed(2)}</span>
           </div>
           <button className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
             Complete Purchase

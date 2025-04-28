@@ -55,13 +55,13 @@ export default function NavBar() {
                   {items.map(item => (
                     <li key={item.id} className="flex justify-between text-gray-800">
                       <span className="truncate w-40">{item.name}</span>
-                      <span>${(item.price * item.quantity).toFixed(2)}</span>
+                      <span>KSH {(item.price * item.quantity).toFixed(2)}</span>
                     </li>
                   ))}
                 </ul>
                 <div className="border-t border-gray-200 pt-3 mt-3 flex justify-between font-semibold text-gray-900">
                   <span>Total:</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>KSH {total.toFixed(2)}</span>
                 </div>
                 <Link
                   to="/checkout"

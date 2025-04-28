@@ -19,7 +19,7 @@ export default function Cart() {
                 <div className="ml-4">
                   <p className="font-medium">{item.name}</p>
                   <p className="text-sm text-gray-500">${item.price.toFixed(2)} x {item.quantity}</p>
-                  <p className="text-sm text-gray-500">Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
+                  <p className="text-sm text-gray-500">Subtotal: KSH{(item.price * item.quantity).toFixed(2)}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
@@ -46,7 +46,7 @@ export default function Cart() {
       )}
       <div className="mt-6 flex justify-between font-semibold text-lg">
         <span>Total:</span>
-        <span>${total.toFixed(2)}</span>
+        <span>KSH{total.toFixed(2)}</span>
       </div>
     </div>
   );
